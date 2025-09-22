@@ -6,7 +6,7 @@ class Settings(BaseSettings):
     azure_openai_endpoint: str
     azure_openai_key: str
     azure_openai_deployment: str
-    azure_openai_api_version: str = "2023-03-15-preview"
+    azure_openai_api_version: str           # now required from .env
     azure_embeddings_deployment: str = None
 
     # Azure Cognitive Search
@@ -14,8 +14,7 @@ class Settings(BaseSettings):
     azure_search_key: str
     azure_search_index: str
 
-    # Local / tooling
-    faiss_index_path: str = "./data/faiss.index"
+    # Tooling / env
     mlflow_tracking_uri: str = "http://localhost:5000"
     env: str = "development"
 
